@@ -9,6 +9,30 @@
 </head>
 
 <body>
+    <header>
+        <div class="menu">
+    
+            <div class="logo">
+                <img src="ft.png" alt="logo">
+                <span>GOURMETIFY</span>
+            </div>
+    
+            <nav>
+                <a href>SOBRE NÓS</a>
+                <a href>INGREDIENTES</a>
+                <a href>RECEITAS</a>
+                <a href="faleconosco.html">FALE CONOSCO</a>
+                <a href="cadastro.html">CADASTRO</a>
+            </nav>
+    
+            <div class="search">
+                <input type="text" placeholder="Pesquise sua receita...">
+                <button>🔍</button>
+            </div>
+    
+        </div>
+    </header>    
+    </div>
 
     <!-- CADASTRO -->
     <div class="container" id="cadastroBox">
@@ -70,8 +94,9 @@
         <p>Não tem uma conta? <span id="cadastroLink">Cadastre-se</span></p>
     </div>
 
+
+    <!-- JAVASCRIPT -->
     <script>
-        // CADASTRO
         document.getElementById("btn_enviar").addEventListener("click", async (e) => {
             e.preventDefault();
 
@@ -110,8 +135,8 @@
                 alert("Cadastro realizado com sucesso!");
 
                 setTimeout(() => {
-                    document.getElementById("cadastroBox").classList.add("hidden");
-                    document.getElementById("loginBox").classList.remove("hidden");
+                    cadastroBox.classList.add("hidden");
+                    loginBox.classList.remove("hidden");
                 }, 1500);
 
             } catch (err) {
@@ -160,13 +185,13 @@
             }
         });
 
-        // Alternância Tela
-        document.getElementById("loginLink").addEventListener("click", () => {
+        // Alternância
+        loginLink.addEventListener("click", () => {
             cadastroBox.classList.add("hidden");
             loginBox.classList.remove("hidden");
         });
 
-        document.getElementById("cadastroLink").addEventListener("click", () => {
+        cadastroLink.addEventListener("click", () => {
             loginBox.classList.add("hidden");
             cadastroBox.classList.remove("hidden");
         });
